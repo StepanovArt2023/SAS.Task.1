@@ -14,26 +14,6 @@ namespace SAS.Task._1
             MainFrame.Navigate(new MainPage());
 
         }
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            var response = MessageBox.Show("Do you really want to exit?", "Exiting...",
-                MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
-            if (response == MessageBoxResult.No)
-            {
-                e.Cancel = true;
-            }
-            else
-            {
-                Application.Current.Shutdown();
-            }
 
-            base.OnClosing(e);
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-    }
 }
 
